@@ -1,0 +1,74 @@
+ .preview{
+     width: 100px;
+     height: 100px;
+     margin: 0 auto;
+     border: 1px solid #D2D6DE;
+     border-radius: 3px;
+     margin-bottom: 15px;
+}
+ .preview1{
+     width: 150px;
+     height: 150px;
+     margin: 0 auto;
+     border: 1px solid #D2D6DE;
+     border-radius: 3px;
+     margin-bottom: 15px;
+} 
+
+.preview2{
+     width: 150px;
+     height: 100px;
+     margin: 0 auto;
+     border: 1px solid #D2D6DE;
+     border-radius: 3px;
+     margin-bottom: 15px;
+}
+.image_preview{
+     margin:1px;
+     border: 1px solid #D2D6DE;
+}
+
+.labeltext{
+     margin:5px;
+}
+.notice {
+     padding: 15px;
+     background-color: #fafafa;
+     border-left: 6px solid #7f7f84;
+     margin-bottom: 10px;
+     -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+             box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+ 
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #ECF0F5;}
+#News {background-color: #FAFAFA;}

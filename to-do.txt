@@ -1,0 +1,26 @@
+KeralKart
+							
+			Adimin part------------
+- Solve the issue of excel file.{most of them are solved }
+							
+- Add Gst to the product Section.(Gst Added in the master section.Fetch data from tbl_gst)
+	Gst type in the product section like:-
+		sgst
+		cgst
+		igst
+		
+- Show product avaibale in stock in admin part.
+
+- create unique slug for every products and store in DB, use this slug in the in the anchor tag for the link purpose instead of name in the user part.  ///done
+	
+
+			user part----------------
+- Add payment gateway and apply coupon code and calculate discount.
+
+- Add mail gateway 
+
+- Add sms gateway for the otp purpose when user register get otp and  after enter the valid otp the register gona successful.
+
+- integrate blog file in the front end part.(file compressed in zip file).
+
+- show the gst calculated price in the user part.

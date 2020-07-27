@@ -1,0 +1,917 @@
+﻿<html lang="en">
+<head>
+	<title>Kerela Kart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styleproduct.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styleCart.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/socialmedia.css">
+	<link rel="stylesheet" type="text/css" href="css/accordions.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/slidebar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/accordions.js"></script>
+	<script src="js/list.js"></script>
+	<link rel="stylesheet" type="text/css" href="verdana/style.css" />
+	<style>
+		img {
+			max-width: 100%;
+		}
+		.btn-search {
+			background: #6ad26a;
+			border-radius: 0;
+			color: #fff;
+			border-width: 1px;
+			border-style: solid;
+			border-color: #6ad26a;
+		}
+
+		.btn-search:link, .btn-search:visited {
+			color: #fff;
+		}
+
+		.btn-search:active, .btn-search:hover {
+			background: #6ad26a;
+			color: #fff;
+			border-width: 1px;
+			#border-style: solid;
+			border-color: #6ad26a;
+		}
+	</style>
+
+	<style>
+		.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+			color: #000; /*Sets the text hover color on navbar*/
+		}
+
+		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+			color: white; /*BACKGROUND color for active*/
+			background-color: #52bf52;
+		}
+
+		.navbar-default {
+			background-color: #52bf52;
+			border-color: #030033;
+		}
+
+		.dropdown-menu > li > a:hover,
+		.dropdown-menu > li > a:focus {
+			color: #262626;
+			text-decoration: none;
+			background-color: #; /*change color of links in drop down here*/
+		}
+
+		.nav > li > a:hover,
+		.nav > li > a:focus {
+			text-decoration: none;
+			background-color: silver; /*Change rollover cell color here*/
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			color: white; /*Change active text color here*/
+		}
+
+		.navbar {
+			margin-bottom: 0px;
+		}
+
+		.header-image {
+			background: url('DSC_1908.jpg');
+			height: 650px;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.breadcrumb {
+			background-color: #ffffff;
+		}
+	</style>
+
+
+	<script>
+		$(function () {
+			$("#slider-range").slider({
+				range: true,
+				min: 0,
+				max: 500,
+				values: [75, 300],
+				slide: function (event, ui) {
+					$("#amount").val("Rs." + ui.values[0] + " - Rs." + ui.values[1]);
+				}
+			});
+			$("#amount").val("Rs." + $("#slider-range").slider("values", 0) +
+				" - Rs." + $("#slider-range").slider("values", 1));
+		});
+	</script>
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+        body {
+            font-family: 'Open Sans', 'sans-serif';
+        }
+
+        .mega-dropdown {
+            position: static !important;
+        }
+
+        .mega-dropdown-menu {
+            padding: 20px 0px;
+            width: 100%;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+            .mega-dropdown-menu > li > ul {
+                padding: 0;
+                margin: 0;
+            }
+
+                .mega-dropdown-menu > li > ul > li {
+                    list-style: none;
+                }
+
+                    .mega-dropdown-menu > li > ul > li > a {
+                        display: block;
+                        color: #222;
+                        padding: 3px 5px;
+                    }
+
+            .mega-dropdown-menu > li ul > li > a:hover,
+            .mega-dropdown-menu > li ul > li > a:focus {
+                text-decoration: none;
+            }
+
+            .mega-dropdown-menu .dropdown-header {
+                font-size: 18px;
+                color: #ff3546;
+                padding: 5px 60px 5px 5px;
+                line-height: 30px;
+            }
+    </style>
+
+</head>
+<body>
+<!--- Header section -->
+	<!--<div>
+		<div style="background-color:#94e094;">
+			<div class="col-xs-12 col-sm-12 col-lg-12 header-right-menu">
+				<ul class="right-menu">
+					<li><a href="#">24x7 Customer Care</a></li>
+					<li>
+						<a href="#">My Account</a>
+						<div class="right-submenu">
+							<div><a href="#">Log In</a></div>
+							<div><a href="#">My Account</a></div>
+							<div><a href="#">My Orders</a></div>
+							<div><a href="#">Track Orders</a></div>
+							<div><a href="#">Sign Out</a></div>
+						</div>
+					</li>
+					<li><a href="#">Supplier</a></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+
+		<div style="padding-bottom:15px;background-color:#94e094;">
+			<div class="col-xs-4 col-lg-2"><img src="image/logo.png" width="100%" height="35px;"></div>
+			<div class="col-xs-6 col-lg-8">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search All Categories" style="border-radius:4px;width:100%;">
+					<span class="input-group-btn">
+						<button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+					</span>
+				</div>
+			</div>
+			<div class="col-xs-2 col-lg-2">
+				<a href="#" class="btn btn-success btn-md">
+					<span class="glyphicon glyphicon-shopping-cart"></span> Cart <span style="background-color:#3a843a;padding:0px 2px;">0</span>
+				</a>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+
+		<nav class="navbar navbar-default bg-warning">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"></a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="category.html">Category</a></li>
+								<li><a href="product.html">Product</a></li>
+								<li><a href="dashboard.html">Dashboard</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Kerala Saree</a></li>
+								<li><a href="#">Kurti</a></li>
+								<li><a href="#">Lengha</a></li>
+								<li><a href="#">Legnins</a></li>
+								<li><a href="#">Purse</a></li>
+								<li><a href="#">South Indian Sarees</a></li>
+								<li><a href="#">Unstiched Suits Dress Material</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Shirts</a></li>
+								<li><a href="#">Lungi</a></li>
+								<li><a href="#">T-Shirts</a></li>
+								<li><a href="#">Wallets</a></li>
+								<li><a href="#">Shirt Unstitched Material</a></li>
+								<li><a href="#">Pants UnStitiched Material</a></li>
+							</ul>
+						</li>
+						<li><a href="#about">Electronics</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Book <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Motivational Books</a></li>
+								<li><a href="#">UPSC Books</a></li>
+								<li><a href="#">Railways Exames Books</a></li>
+								<li><a href="#">Vasthu Books</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ayurvedic Medicines <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">For Hairs</a></li>
+								<li><a href="#">For Skins</a></li>
+							</ul>
+						</li>
+						<li><a href="#about">Home & kitchen</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vasthu Elements <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Feing Sui Elements</a></li>
+								<li><a href="#">Main Door Decoration Elements</a></li>
+								<li><a href="#">Direction Dosh Remedies Elements</a></li>
+								<li><a href="#">Vasthu Success Elements</a></li>
+							</ul>
+						</li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#about">Contact</a></li>
+					</ul>
+				</div>/.nav-collapse 
+			</div>
+		</nav>
+	</div>-->
+
+    <div>
+        <div style="background-color:#94e094;">
+            <div class="col-xs-12 col-sm-12 col-lg-12 header-right-menu">
+                <ul class="right-menu">
+                    <li><a href="#">24x7 Customer Care</a></li>
+                    <li>
+                        <a href="#">My Account</a>
+                        <div class="right-submenu">
+                            <div><a href="#">Log In</a></div>
+                            <div><a href="#">My Account</a></div>
+                            <div><a href="#">My Orders</a></div>
+                            <div><a href="#">Track Orders</a></div>
+                            <div><a href="#">Sign Out</a></div>
+                        </div>
+                    </li>
+                    <li><a href="#">Supplier</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <div style="padding-bottom:15px;background-color:#94e094;">
+            <div class="col-xs-4 col-lg-2"><img src="image/logo.png" width="100%" height="35px;"></div>
+            <div class="col-xs-6 col-lg-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search All Categories" style="border-radius:4px;width:100%;">
+                    <span class="input-group-btn">
+                        <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Search</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-2 col-lg-2">
+                <a href="#" class="btn btn-success btn-md">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart <span style="background-color:#3a843a;padding:0px 2px;">0</span>
+                </a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <nav class="navbar navbar-default bg-warning">
+
+
+            <div class="container">
+                <nav class="navbar ">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Home</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse js-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <span class="caret"></span></a>
+                                <ul class="dropdown-menu mega-dropdown-menu" style="display: none;">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Men Collection</li>
+                                            <div id="menCollection" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <a href="#"><img src="http://placehold.it/254x150/ff3546/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                        <h4><small>Summer dress floral prints</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                        <h4><small>Gold sandals with shiny touch</small></h4>
+                                                        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                        <h4><small>Denin jacket stamped</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                </div><!-- End Carousel Inner -->
+                                                <!-- Controls -->
+                                                <a class="left carousel-control" href="#menCollection" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#menCollection" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div><!-- /.carousel -->
+                                            <li class="divider"></li>
+                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Features</li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Carousel Control</a></li>
+                                            <li><a href="#">Left &amp; Right Navigation</a></li>
+                                            <li><a href="#">Four Columns Grid</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Fonts</li>
+                                            <li><a href="#">Glyphicon</a></li>
+                                            <li><a href="#">Google Fonts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Plus</li>
+                                            <li><a href="#">Navbar Inverse</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons &amp; Default</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Much more</li>
+                                            <li><a href="#">Easy to Customize</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                            <li><a href="#">Custom Fonts</a></li>
+                                            <li><a href="#">Slide down on Hover</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown mega-dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women <span class="caret"></span></a>
+                                <ul class="dropdown-menu mega-dropdown-menu" style="display: none;">
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Features</li>
+                                            <li><a href="#">Auto Carousel</a></li>
+                                            <li><a href="#">Carousel Control</a></li>
+                                            <li><a href="#">Left &amp; Right Navigation</a></li>
+                                            <li><a href="#">Four Columns Grid</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Fonts</li>
+                                            <li><a href="#">Glyphicon</a></li>
+                                            <li><a href="#">Google Fonts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Plus</li>
+                                            <li><a href="#">Navbar Inverse</a></li>
+                                            <li><a href="#">Pull Right Elements</a></li>
+                                            <li><a href="#">Coloured Headers</a></li>
+                                            <li><a href="#">Primary Buttons &amp; Default</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Much more</li>
+                                            <li><a href="#">Easy to Customize</a></li>
+                                            <li><a href="#">Calls to action</a></li>
+                                            <li><a href="#">Custom Fonts</a></li>
+                                            <li><a href="#">Slide down on Hover</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-sm-3">
+                                        <ul>
+                                            <li class="dropdown-header">Women Collection</li>
+                                            <div id="womenCollection" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                                        <h4><small>Summer dress floral prints</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/ff3546/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                                        <h4><small>Gold sandals with shiny touch</small></h4>
+                                                        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                    <div class="item">
+                                                        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&amp;text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                                        <h4><small>Denin jacket stamped</small></h4>
+                                                        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
+                                                    </div><!-- End Item -->
+                                                </div><!-- End Carousel Inner -->
+                                                <!-- Controls -->
+                                                <a class="left carousel-control" href="#womenCollection" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#womenCollection" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div><!-- /.carousel -->
+                                            <li class="divider"></li>
+                                            <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Store locator</a></li>
+                        </ul>
+
+                    </div><!-- /.nav-collapse -->
+                </nav>
+            </div>
+
+
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".dropdown").hover(
+                        function () {
+                            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("400");
+                            $(this).toggleClass('open');
+                        },
+                        function () {
+                            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("400");
+                            $(this).toggleClass('open');
+                        }
+                    );
+                });	</script>
+
+        </nav>
+    </div>
+
+
+<!--- Header section close-->
+
+<!--- product section -->
+<div class="pd-section">
+	<div class="bg-banner">
+	 <div class="bnr-tag">
+		<h3>Product Detail</h3>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Shop</a></li>
+			<li><a href="#">Cookware</a></li>
+			<li><a href="#">Aliquam Lobortis Est</a></li>
+		</ul>
+	 </div>
+	<div class="bg-overlay"></div>
+		<img src="images/banner.jpg">
+	</div>
+</div>
+<div class="container">
+	<div class="col-md-7 col-sm-7 col-xs-12 right-section">
+	    <div class="col-md-2 col-sm-4 col-xs-3">
+			<ul class="nav section-navs">
+			    <li class="active"><a data-toggle="tab" href="#image1"><img src="images/utensil1.jpg" /></a></li>
+			    <li><a data-toggle="tab" href="#image2"><img src="images/utensil2.jpg" /></a></li>
+			    <li><a data-toggle="tab" href="#image3"><img src="images/utensil1.jpg" /></a></li>
+			    <li><a data-toggle="tab" href="#image4"><img src="images/utensil2.jpg" /></a></li>
+			</ul>
+	    </div>
+	    <div class="col-md-10 col-sm-8 col-xs-9">
+	    <div class="tab-content">
+		    <div id="image1" class="tab-pane fade in active">
+		    	<img src="images/utensil1.jpg" />
+		    </div>
+		    <div id="image2" class="tab-pane fade">
+		    	<img src="images/utensil2.jpg" />
+		    </div>
+		    <div id="image3" class="tab-pane fade">
+		    	<img src="images/utensil1.jpg" />
+		    </div>
+		    <div id="image4" class="tab-pane fade">
+		    	<img src="images/utensil2.jpg" />
+		    </div>
+		 </div>
+		 </div>
+	</div>
+	<div class="col-md-5 col-sm-5 col-xs-12 left-section">
+		<h4>Aliquam Lobortis Ets</h4>
+		<ul class="star-rating">
+			<li><span class="fa fa-star checked"></span></li>
+			<li><span class="fa fa-star checked"></span></li>
+			<li><span class="fa fa-star checked"></span></li>
+			<li><span class="fa fa-star"></span></li>
+			<li><span class="fa fa-star"></span></li>
+			<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+			<span class="review-count">( 0 Customer Reviews )</span>
+		</ul>
+		<p class="avail-count">Availability : <span class="green">In Stock</span></p>
+		<p class="pd-price">Price : <span class="green">&#x20B9 5000/-</span> <small>&#x20B9 7000</small></p>
+		<div class="pd-qty">
+		<span>QTY</span>
+		<select>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+		</div>
+		<p class="pd-categories">Categories : <span>Coolware</span></p>
+		<p class="pd-tags">Tags :<span> Lorem, Ipsum</span></p>
+		<span class="action"><i class="fa fa-heart"></i> Add to Wishlist</span>
+		<span class="action"><i class="fa fa-refresh "></i> Compare</span>
+		<ul class="links">
+			<span>Share :</span>
+			<li><a href="#"><i class="fa fa-facebook-f "></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="#"><i class="fa fa-rss"></i></a></li>
+		</ul>
+	</div>
+
+	<div class="pd-description clearfix">
+		<ul class="section-navs col-md-3 col-sm-3">
+			<li class="active"><a data-toggle="tab" href="#description">DESCRIPTION</a></li>
+			<li><a data-toggle="tab" href="#information">INFORMATION</a></li>
+			<li><a data-toggle="tab" href="#review">REVIEW</a></li>
+		</ul>
+		<div class="tab-content col-md-9 col-sm-9">
+		    <div id="description" class="tab-pane fade in active">
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /> <br /> 
+		    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		    </div>
+		    <div id="information" class="tab-pane fade">
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+		    </div>
+		    <div id="review" class="tab-pane fade">
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+		 </div>
+	</div>
+	</div>
+
+	<div class="pd-slider">
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <h3 class="rd-prdct">RECOMMENDED PRODUCTS</h3>
+		    <!-- Indicators -->
+		    <!-- Left and right controls -->
+		    <a class="left" href="#myCarousel" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left fa fa-angle-left"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right" href="#myCarousel" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right  fa fa-angle-right"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+
+		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner">
+		      <div class="item active">
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      </div>
+
+		      <div class="item">
+
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      	<div class="pd-item">
+		      		<img src="images/pd3.jpg" />
+		      		<h5>Lorem ipsum</h5>
+		      		<ul class="star-rating">
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star checked"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li><span class="fa fa-star"></span></li>
+						<li class="review"><a href="#"><span class="fa fa fa-edit"></span></a></li>
+					</ul>
+					<h6>$195.00s</h6>
+		      	</div>
+		      </div>
+		  
+		    </div>
+
+		  </div>
+	</div>
+</div>
+</div>
+<!--- product section close -->
+
+    <div style="background-color:green;height:2px;width:96%;margin-left:26px;"></div>
+
+
+
+
+    <div class="row" id="row10">
+        <div class="footer-widget">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="single-widget">
+                            <h2>Section 1</h2>
+                            <ul class="footer nav-pills nav-stacked">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Shipping  Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="single-widget">
+                            <h2>Section 2</h2>
+                            <ul class="footer nav-pills nav-stacked">
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Refund</a></li>
+                                <li><a href="#">Infringement</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="single-widget">
+                            <h2>Payment Method</h2>
+                            <ul class="footer nav-pills nav-stacked">
+                                <li><a href="#">COD</a></li>
+                                <li><a href="#">Net banking</a></li>
+                                <li><a href="#">Master Card</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="single-widget">
+                            <h2>Payment Method</h2>
+                            <ul class="footer nav-pills nav-stacked">
+                                <li><a href="#">COD</a></li>
+                                <li><a href="#">Net banking</a></li>
+                                <li><a href="#">Master Card</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="single-widget">
+                            <h2>Subscribe Here</h2>
+                            <div class="input-group" style="margin-top:20px;">
+                                <input type="text" class="form-control" placeholder="Search All Categories" style="border-radius:4px;width:100%;">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-search" type="button"><i class="fa fa-search fa-fw"></i> Subscribe</button>
+                                </span>
+                            </div>
+                        </div>
+                        <!--<div>
+                            <div style="color: black;font-family:'Roboto',sans-serif;font-size:16px;font-weight:600;margin:36px 2px;">Find Us On</div>
+                            <ul class="footer nav-pills nav-stacked">
+                                <li>
+                                    <a href="#">
+                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                            <a href="#" class="fa fa-facebook"></a>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                            <a href="#" class="fa fa-twitter"></a>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                            <a href="#" class="fa fa-linkedin"></a>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                            <a href="#" class="fa fa-skype"></a>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background:#122112;padding:20px;">
+        <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4">
+            <span style="color:#ffffff;">Copyright </span><img src="image/copyright.png" width="15px;"> <span style="color:#ffffff;">2017 Keral Kart All Rights Reserved.</span>
+        </div>
+        <div class="col-xs-8 col-sm-4 col-md-4 col-lg-5"></div>
+        <div class="col-xs-8 col-sm-4 col-md-4 col-lg-3"><img src="image/payment.png"></div>
+    </div>
+
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
+<script type="text/javascript">
+	/*=========== bg-fun ==============*/
+	$(document).ready(function(e) {
+		$('label.bg').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+				$('input',this).attr('checked',false);
+			}else{
+				$(this).addClass('active');
+				$('input',this).attr('checked',true);
+			}
+			return false;
+		});
+
+		$('label.bg-fun').click(function(){
+
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+				$('input',this).attr('checked',false);
+			}else{
+				$(this).addClass('active');
+				$('input',this).attr('checked',true);
+			}
+			return false;
+		});
+	});
+	$(window).scroll(function(){
+		if ($(window).scrollTop() >= 1) {
+			$('nav').addClass('fixed-header');
+		}
+		else {
+			$('nav').removeClass('fixed-header');
+		}
+	});
+
+</script>
+</body>
+</html>

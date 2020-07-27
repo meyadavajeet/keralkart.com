@@ -1,0 +1,120 @@
+
+/** Blog Section Start **/
+img {
+    max-width: 100%;
+    overflow: hidden;
+    display: block;
+}
+.blog-section {
+    margin: 40px 0;
+    font-family: calibri;
+}
+.section-one { 
+	border-right:1px solid
+ }
+.section-one h3 {
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+.section-one ul.links {
+	padding: 0;
+}
+.section-one ul.links li {
+	display: inline-block;
+	padding: 5px;
+}
+.section-one ul.pre-blog, ul.pop-blog {
+	list-style: none;
+	padding: 0;
+	font-size: 16px;
+	overflow: hidden;
+}
+.section-one ul.pre-blog  li p a{
+	text-decoration: none;
+}
+
+.section-one ul.pre-blog li, ul.pop-blog li {
+	margin: 5px 0;
+	overflow: hidden;
+}
+.section-one ul.pre-blog li a, ul.pop-blog li a {
+	color: #181818;
+	text-decoration: underline;
+}
+.section-one ul.pre-blog li a:hover, ul.pop-blog li a:hover {
+	text-decoration: none;
+}
+.section-one ul.pre-blog li a img, ul.pop-blog li a img {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	padding-right: 5px;
+}
+.section-two {
+	
+	padding-top: 20px;
+}
+.section-two .mid-blog {
+	overflow: hidden;
+}
+.section-two .mid-blog h2 {
+	font-size:30px;
+	font-family:'Roboto', sans-serif;
+	font-weight: bold;
+}
+.section-two .mid-blog h5 {
+	font-size: 16px;
+	font-family: calibri;
+	margin-bottom: 20px;
+}
+.section-two .mid-blog h5 i {
+	padding-left: 15px;
+}
+.section-two .mid-blog img{
+	height:524px;
+	width:100%; 
+	#border:0.3px solid gray;
+}
+.section-three {
+	padding-top: 20px;
+}
+.refer-product img {
+    display: inline;
+    overflow: auto;
+    padding-left: 20px;
+
+}
+.refer-product {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+.refer-product h4 {
+    font-weight: bold;
+    font-size: 14px;
+}
+.refer-product h4 i {
+    font-style: inherit;
+    font-size: 12px;
+    color: #0d8d12;
+    font-weight: 100;
+}
+.refer-product h4 {
+    font-weight: bold;
+    font-size: 14px;
+}
+.refer-product h6 {
+    font-weight: bold;
+}
+.refer-product h6 i {
+    font-style: inherit;
+    text-decoration: line-through;
+    color: #ff0000;
+}
+.code-icon{
+background-color: ;
+font-size: 0.8rem !important;
+border-radius:100px;
+    margin-left:30px;
+  }

@@ -1,0 +1,721 @@
+* {
+    outline: none; 
+}
+.cr_tab {
+    font-family: verdana;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.cr_tab i {
+    float: right;
+    font-size: 11px;
+    color: #ccdb38;
+}
+.cr-info h5 {
+    font-size: 14px;
+    font-family: verdana_bold;
+}
+.cr-info h5 span:first-child {
+    font-family: verdana_bold;
+    color: #989898;
+}
+.cr-info h5 span:last-child {
+    font-size: 10px;
+    color: #52bf52;
+    font-family: verdana;
+}
+.cr-info p {
+    font-size: 11px;
+    color: #242428;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+.cr-info > span {
+    font-size: 11px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.cr-info > span select {
+    border: 0;   
+    color: #242428;
+}
+.cr-btn {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 2px;
+}
+.cr-btn button {
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 2px;
+}
+.cr-btn h6 a {
+    text-decoration: none;
+    color: #52bf52;
+    font-size: 14px;
+    float: left;
+    font-weight: bold;
+}
+.cr-btn h6 {
+    display: inline-flex;
+    margin-left: 30px;
+    margin-top:  0;
+}
+.cr-info p span {
+    text-decoration: line-through;
+    color: red;
+}
+.cr_tab i:last-child {
+    margin-top: -17px;
+}
+h3.cr-tag {
+    margin-left: 15px;
+    margin-right: 6px;
+    font-size: 22px;
+    color: 545665;
+    font-family: verdana;
+    padding: 0 0 7px 0;
+    margin-bottom: 25px;
+}
+h3.cr-tag:after {
+    content: "";
+    height: 1px;
+    width: 96%;
+    position: absolute;
+    left:  0;
+    bottom:  0;
+    background: #ccc;
+}
+.cr_price:before {
+    content: "";
+    width: 1px;
+    height: 500px;
+    background-color: #ccc;
+    position: absolute;
+    top: -27px;
+}
+.padding-left-30 {
+    padding-left: 30px;
+}
+.padding-right-30 {
+    padding-right: 30px;
+}
+.cr_price {
+    font-family: verdana;
+}
+.cr_price h4 {
+    font-size: 16px;
+    font-family: verdana_bold;
+    margin-bottom: 40px;
+}
+.cr_price p span {
+    float: right;
+}
+.cr_price p .am-clr {
+    color: #ccdb38;
+}
+p.tl-amt {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+p.tl-amt span {
+    color: #52bf52;
+}
+.cr_price button {
+    width: 100%;
+    background-color: #359f3a;
+    border: 1px solid #359f3a;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+.cr_price h6 {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #ccc;
+    margin: 20px 0;
+}
+.cr_price h6 a {
+    color: #ceda38;
+}
+/*--------cart page end ----------*/
+/*----radio button-----------*/
+.chk-sctn {
+    margin: 40px 0;
+    font-family: verdana;
+}
+.panel-heading {
+    background-color: #dcf6dd !important;
+    border-color: #dcf6dd !important;
+    padding: 18px 15px !important;
+}
+
+.panel.panel-default {
+    border: 1px solid #dcf6dd;
+    box-shadow: none;
+    border-radius: 0 !important;
+}
+.panel-title a {
+    color: #242428 !important;
+    font-family: verdana_bold;
+    font-size: 13px;
+    text-decoration: none !important;
+}
+.frm-fill input {
+    width: 70%;
+    padding: 7px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: block;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #dcf6dd !important;
+}
+.panel-body {
+    padding: 20px !important;
+}
+.frm-fill input:last-child, input.continue {
+    width: 210px;
+    clear:  both;
+    background-color: #52bf52;
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+}
+.panel.panel-default {
+    margin-top: 25px !important;
+}
+/*----radio button-----------*/
+/*------checkout page ----------------*/
+.pay-md input.continue {
+    padding: 7px 10px;
+    margin: 10px 0;
+}
+.right-sctn .cr_price {
+    margin: 65px 0;
+    padding: 0 10px;
+}
+.right-sctn .cr_price:before {
+    top: 65px;
+    left: 15px;
+    height: 230px;
+}
+.right-sctn .cr_price h5 {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #242428;
+    position: relative;
+    margin-bottom: 25px;
+}
+.right-sctn .cr_price h5 span {
+    font-size: 10px;
+}
+.right-sctn .cr_price h5:after {
+    content: "";
+    height: 1px;
+    width: 125px;
+    background: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+.right-sctn .cr_price p {
+    font-size: 13px;
+}
+.panel-body>h5 {
+    font-family: verdana_bold;
+}
+.bg-green {
+    padding-left: 0 !important;
+    margin-top: 10px;
+}
+.sq-bx {
+    padding: 10px 15px 20px;
+    border: 1px solid #ccc;
+    background-color: #dcf6dd;
+}
+.sq-bx h6 {
+    font-family: verdana_bold;
+    font-size: 14px;
+    position: relative;
+}
+.sq-bx h6 span {
+    font-family: verdana;
+    font-size: 10px;
+}
+.sq-bx h6:after {
+    content:  "";
+    width: 60px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    left:  0;
+    bottom: -5px;
+}
+.sq-bx p {
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 15px;
+    border-bottom:  1px solid #ccc;
+    padding-top: 10px;
+}
+.sq-bx button {
+    background: none;
+    border: 0;
+    font-size: 13px;
+    font-family: verdana_bold;
+    color: #242428;
+}
+.sq-bx>span {
+    float: right;
+    font-size: 13px;
+    font-family: verdana_bold;
+}
+.sq-bx>span a {
+    color: #242428;
+    text-decoration: none;
+}
+.sq-bx.bg-white {
+    background-color: #fff;
+    text-align: center;
+}
+.sq-bx.bg-white img {
+    padding: 50.5px 0;
+}
+/*------checkout page end ----------------*/
+/*-------- order success page end-------------*/
+.sucs_box {
+    text-align: center;
+    margin: 20px 50px;
+    padding: 15px 60px;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+    font-family: verdana;
+}
+.sucs_box h4 {
+    color: #359f3a;
+    margin-bottom: 15px;
+}
+.margin-50.clearfix {
+    margin: 0 35px;
+}
+.brdr-bx {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-family: verdana;
+}
+.brdr-bx h6:after {
+    content: "";
+    width: 40px;
+    height:  1px;
+    background-color:  #ccc;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+.brdr-bx h6 {
+    position: relative;
+    margin-bottom: 15px;
+}
+.brdr-bx p {
+    font-size: 12px;
+}
+.first-div {
+    margin-bottom: 20px;
+}
+.second-div p {
+    margin-bottom: 15px;
+}
+p.cncl {
+    text-align: right;
+    font-size: 11px;
+    margin: 10px auto;
+}
+p.cncl a {
+    color: #f00;
+}
+/*-------- order success page end-------------*/
+/*-------- order failure page-------------*/
+.sucs_box.failure p {
+    margin: 25px 0px;
+}
+p.cncl.failure {
+    margin: 5px 0 !important;
+}
+.first-div.failure {
+    margin: 0;
+}
+/*-------- order failure page end-------------*/
+/* The container */
+.container_radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
+}
+
+/* Hide the browser's default radio button */
+.container_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.container_radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container_radio input:checked ~ .checkmark {
+    background-color: #52bf52;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/*============= bg-fun ==============*/
+label.bg {
+    font-weight: normal;
+    margin: 5px 0 20px 10px;
+}
+label.bg .fa, .button-checkbox .fa {
+    width: 14px;
+    font-size: 13px;
+    color: #52bf52;
+}
+label.bg .fa-check-square-o, label.bg.active .fa-square-o,
+.button-checkbox .fa-check-square-o, .button-checkbox.active .fa-square-o {
+    display: none;
+}
+label.bg.active .fa-check-square-o,
+.button-checkbox.active .fa-check-square-o {
+    display: inline-block;
+}
+label.bg .fa-check-square-o,
+.button-checkbox .fa-check-square-o  {
+    color: #52bf52;
+}
+label.bg input {
+    display: none;
+}
+#personalInfo label input[type="checkbox"], .custom-inputs label input[type="checkbox"] {
+    display: none;
+}
+label.bg-fun {
+    font-weight: normal;
+}
+label.bg-fun .fa {
+    width: 14px;
+}
+label.bg-fun .fa-check-square-o {
+    color: #ea5343;
+}
+label.bg-fun .fa-check-square-o, label.bg-fun.active .fa-square-o {
+    display: none;
+}
+label.bg-fun input {
+    display: none;
+}
+label.bg-fun.active .fa-check-square-o {
+    display: inline-block;
+}
+/*----------bg fun -----------*/
+
+
+
+
+/*----------Admin Page-----------*/
+.header_admin {
+    background-color: #359f3a;
+    font-family: verdana;
+}
+span.logo {
+    display: inline-block;
+    margin-right: 15px;
+}
+span.admin-detail {
+    display: inline-block;
+    margin-top: 20px;
+}
+.header_admin input {
+    width: 100%;
+    border-radius: 2px;
+    padding: 5px 10px;
+    line-height: 25px;
+    display: inline-block;
+    border: none;
+    margin-top: 30px;
+}
+span.admin-detail img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-radius: 100%;
+    border: none;
+    margin-top: 4px;
+}
+
+span.admin-detail h6 {
+    float: right;
+    margin: 5px 0 0 10px;
+    font-size: 13px;
+    color: #fff;
+    line-height: 18px;
+}
+.sidenav {
+    background: #f5f5f5;
+    overflow-x: hidden;
+    padding: 0 0 100px 0 !important;
+    box-shadow: 0 2px 5px 0px #8e8686;
+    margin-left: -15px;
+}
+.sidenav a {
+    padding: 10px 10px 10px 45px;
+    text-decoration: none !important;
+    color: #242428 !important;
+    display: block;
+    font-size: 19px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+.content {
+    font-family: verdana;
+    font-weight: normal;
+    position:  relative;
+}
+.sidenav a i {
+    margin-right: 3px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.main-content h5 a { 
+    color:  #242428;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*----------Admin Page End-----------*/
+
+.admin-footer p {
+    padding: 25px;
+    background-color:  #222;
+    font-family: verdana;
+    color: #fff;
+}
+.admin-footer {
+    margin-top: 3px;
+}
+.ordr-navbar li {
+    display: inline-block;
+    width: 130px;
+    font-family: verdana_bold;
+}
+.ordr-navbar {
+    margin: 35px 0;
+    padding-left:  30px;
+}
+.ordr-navbar li a {
+    color: #242428;
+    text-decoration: none;
+}
+.ordr-navbar li a:hover {
+    color: #45b032;
+}
+.ordr-navbar li.active a {
+    color: #45b032;
+}
+.tab-content {
+    margin-left: 30px;
+}
+.border-box table.table thead th {
+    text-align: center;
+    font-family: verdana_bold;
+    font-weight: normal;
+    font-size: 14px;
+    color: #242428;
+    padding: 17px 8px;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th {
+    border-bottom-width: 0 !important;
+}
+.border-box table.table tbody tr {
+    background: linear-gradient(#fff, #efefef);
+}
+.border-box table.table tbody td {
+    padding: 15px 8px;
+    text-align: center;
+    font-size: 13px;
+    vertical-align: middle;
+}
+.border-box table.table tbody td a {
+    color: #45b030;
+    text-decoration: none;
+}
+.table>tbody+tbody {
+    border: 0 !important;
+}
+.stock-content {
+    margin: 55px 0 0 30px;
+}
+.border-box.details table.table tbody tr {
+    background: #fff;
+}
+.order-detail {
+    margin: 20px 0;
+}
+.detail-content {
+    margin-left: 30px;
+}
+.order-detail p span {
+    font-family: verdana_bold;
+    width: 100px;
+    display:  inline-block;
+}
+p.t-amount {
+    text-align: right;
+}
+p.t-amount span {
+    font-family: verdana_bold;
+}
+.popup .modal-header {
+    border: none;
+    padding: 20px 35px;
+}
+.popup .modal-body {
+    padding: 15px 30px;
+}
+.modal-content.popup {
+    border-radius: 0;
+    font-family: verdana;
+    padding-bottom: 50px;
+}
+span.btn-fb a {
+    width: 210px;
+    clear: both;
+    background-color: #4080fe;
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 7px 0;
+    text-decoration: none;
+    margin-right: 100px;
+    margin-left: 7px;
+}
+span.btn-gl button {
+    width: 210px;
+    clear: both;
+    background-color: #de5245;
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 7px 0;
+    text-decoration: none;
+}
+.popup form.frm-fill input:first-child {
+    width: 100%;
+}
+div#myModal {
+    background-color: #0000006b;
+}
+div#myModal .modal-dialog {
+    margin: 120px auto;
+}
+.sml_sidenav {
+    display: none;
+}
+.sml_btnbar {
+    display: none;
+}
+.btn-explore {
+    padding-top:  30px;
+}
+.header_admin form.input-group {
+    margin: 0;
+}
+/*=================media query==========*/
+@media screen and (max-width: 768px) {
+    .sidenav  {
+        display: none;
+    }
+    .sml_sidenav {
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0px #8e8686;
+        left: 0;
+        z-index: 1;
+    }
+    .sml_sidenav a {
+        display: block;
+        line-height: 30px;
+        color: #242428 !important;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 20px;
+        text-decoration: none !important;
+    }
+    .sml_btnbar {
+        display: block;
+        position: absolute;
+        left: 0;
+        color: #fff;
+        background: no-repeat;
+        border: none;
+        top: -32px;
+        font-size: 22px;
+        padding: 5px 10px 5px 8px;
+        background-color: #17161675;
+    }
+}
