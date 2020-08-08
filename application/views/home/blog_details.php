@@ -1,4 +1,34 @@
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<?php
+// Program to display URL of current page.
+
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+	$link = "https";
+else
+	$link = "http";
+
+// Here append the common URL characters.
+$link .= "://";
+
+// Append the host(domain name, ip) to the URL.
+$link .= $_SERVER['HTTP_HOST'];
+
+// Append the requested resource location to the URL
+$link .= $_SERVER['REQUEST_URI'];
+
+// Print the link
+$link;
+
+//https://www.facebook.com/plugins/share_button.php?href='.urlencode($link).'&appId=201511064046972
+
+// $finalFBURL='https://www.facebook.com/dialog/feed?app_id=621572568420951&display=touch&link='.urlencode($link).'%2F&redirect_uri='.urlencode($link);
+$finalFBURL='https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fkeralkart.com%2F&appId=427813947821443';
+
+$linkedinURL='https://www.linkedin.com/shareArticle?mini=true&url='.$link.'&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn';
+
+$finalTwitterURL ='https://twitter.com/intent/tweet?url='.$link.'&text=keralkart%20blog';
+?>
+
 
 <style type="text/css">
             * {
@@ -222,6 +252,20 @@
         <?php endforeach ?>
             
         </div>
+		<div class="row">
+			<div class="text-center">
+				<div class="post-shares sticky-shares">
+
+					<a target="_blank" href="<?=$finalFBURL?>"  id="shareBtn" title="Share to facebook" class="share-facebook"><img src="<?=base_url()?>assets/images/fb.png" width="22" height="22"></a>
+					<a href="<?=$finalTwitterURL?>" target="_blank" title="Share to twitter" class="share-twitter"><img src="<?=base_url()?>assets/images/twitter.png" width="22" height="22"></a>
+					<a target="_blank" title="Share via Whatsapp" href="https://wa.me/?text=<?=urlencode($link)?>" class="share-pinterest"><img src="<?=base_url()?>assets/images/whatsapp.png" width="22" height="22"></a>
+					<a target="_blank" href="<?=$linkedinURL?>" target="_blank" title="share to linkedin" class="share-linkedin"><img src="<?=base_url()?>assets/images/icon-linkedin.webp" width="22" height="22"></a>
+					<a target="_blank" href="mailto:?subject=Keral Kart&body=I have got a wonderful product for you! Please go through it  <?=$link?>" title="Share link via Email" class="share-envelope"><img src="<?=base_url()?>assets/images/envelope.png" width="22" height="22"></a>
+
+				</div>
+			</div>
+		</div>
+
     </div>
 </div>  
 <br>

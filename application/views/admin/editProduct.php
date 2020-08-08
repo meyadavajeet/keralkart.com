@@ -104,14 +104,30 @@
                             </div>
                         </div>
 
+						<div class="form-group">
+							<label class="col-sm-3 control-label">M.R.P </label>
+							<div class="col-sm-9">
+								<input type="number" value="<?php echo $productsList->mrp;?>" class="form-control" id=""
+									   name="mrp">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Selling price </label>
+							<div class="col-sm-9">
+								<input type="number" value="<?php echo $productsList->price;?>" class="form-control"
+									   id="" name="price">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Delivery Charge </label>
+							<div class="col-sm-9">
+								<input type="number" value="<?php echo $productsList->delivery_charge;?>" class="form-control"
+									   id="" name="delivery_charge">
+							</div>
+						</div>
 
 
-
-
-                       
-
-
-                        <div class="form-group">
+						<div class="form-group">
                             <label class="col-sm-3 control-label">Weight </label>
                             <div class="col-sm-9">
                                 <input type="text" value="<?php echo $productsList->weight;?>" class="form-control"

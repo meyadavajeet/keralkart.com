@@ -29,6 +29,7 @@ date_default_timezone_set('Asia/Kolkata');
 //$config['base_url'] = $protocol.$_SERVER['HTTP_HOST'].'/';
 
 // $config['base_url'] ='https://keralkart.com/';
+ $config['base_url'] = 'http://localhost/office/keralkart0.8/';
 //
 
 /*

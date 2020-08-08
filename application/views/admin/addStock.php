@@ -110,6 +110,10 @@
                             <label for="size">Size</label>
                             <input id="size" class="form-control" type="text" name="size">
                         </div>
+						<div class="form-group">
+							<label for="delivery_charge">Delivery Charge</label>
+							<input id="delivery_charge" class="form-control" min="0" type="number" name="delivery_charge">
+						</div>
                       
                         <div class="form-group">
                             <label>Status </label>

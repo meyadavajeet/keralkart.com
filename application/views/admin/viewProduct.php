@@ -88,20 +88,20 @@ $(document).ready(function(){
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Brand </label>
-                            <div class="col-sm-9">
-                                <select class="form-control" name="brand">
-                                    <option value="<?=$productsList->brid?>"><?=$productsList->brName;?></option>
-                                    <?php foreach ($brandList as $key => $value):
-                                       ?>
-                                    <option value="<?=$value->id?>"><?=$value->brandName?></option>
-                                    <?php
-                                    endforeach;
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-sm-3 control-label">Brand </label>-->
+<!--                            <div class="col-sm-9">-->
+<!--                                <select class="form-control" name="brand">-->
+<!--                                    <option value="--><?//=$productsList->brid?><!--">--><?//=$productsList->brName;?><!--</option>-->
+<!--                                    --><?php //foreach ($brandList as $key => $value):
+//                                       ?>
+<!--                                    <option value="--><?//=$value->id?><!--">--><?//=$value->brandName?><!--</option>-->
+<!--                                    --><?php
+//                                    endforeach;
+//                                    ?>
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Product Name </label>
                             <div class="col-sm-9">
@@ -109,7 +109,12 @@ $(document).ready(function(){
                                     id="" name="productName">
                             </div>
                         </div>
-
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Product Code </label>
+							<div class="col-sm-9">
+								<input type="text" value="<?php echo $productsList->productCode;?>" class="form-control" id="" name="productCode">
+							</div>
+						</div>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label">M.R.P </label>
@@ -137,13 +142,13 @@ $(document).ready(function(){
 
 
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Quantity </label>
-                            <div class="col-sm-9">
-                                <input type="number" value="<?php echo $productsList->quantity;?>" class="form-control"
-                                    id="" name="quantity">
-                            </div>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-sm-3 control-label">Quantity </label>-->
+<!--                            <div class="col-sm-9">-->
+<!--                                <input type="number" value="--><?php //echo $productsList->quantity;?><!--" class="form-control"-->
+<!--                                    id="" name="quantity">-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Color </label>

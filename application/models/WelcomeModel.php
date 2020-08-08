@@ -424,7 +424,7 @@ class WelcomeModel extends CI_Model
     }
     public function getProductDetailById($id)
     {
-        $this->db->select('a.id, a.categoryId as catID, a.subcategoryId, a.productCode, a.productName, a.strikePrice, a.price, a.mrp, a.quantity, a.discount, a.color, a.size, a.weight, a.brand, a.smallDiscription, a.features, a.productDescription, a.hotdeal, a.premium, a.inStock, a.latestCollection, a.thumbnail1, a.thumbnail2, a.thumbnail3, a.thumbnail4, a.added_at, a.updated_at, a.added_by, a.updated_by, a.status,b.id as catId, b.typeId, b.categoryName, b.categoryThumbnail, b.status, b.added_at, b.updated_at,c.id as subCatId, c.categoryId, c.subCategoryName, c.added_at, c.updated_at, c.status,br.id as brid,br.brandName as brName,br.status as brStatus');
+        $this->db->select('a.id, a.categoryId as catID, a.subcategoryId, a.productCode, a.productName, a.strikePrice, a.price, a.mrp, a.quantity, a.discount, a.color, a.size, a.weight, a.brand, a.smallDiscription, a.features, a.productDescription, a.hotdeal, a.premium, a.inStock, a.latestCollection, a.thumbnail1, a.thumbnail2, a.thumbnail3, a.thumbnail4, a.added_at, a.updated_at, a.added_by, a.updated_by, a.status,a.delivery_charge,b.id as catId, b.typeId, b.categoryName, b.categoryThumbnail, b.status, b.added_at, b.updated_at,c.id as subCatId, c.categoryId, c.subCategoryName, c.added_at, c.updated_at, c.status,br.id as brid,br.brandName as brName,br.status as brStatus');
         $this->db->from('product_details a');
         $this->db->join('category b', 'b.id=a.categoryId', 'left');
         $this->db->join('subcategory c', 'c.id=a.subcategoryId', 'left');

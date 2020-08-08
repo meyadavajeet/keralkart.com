@@ -1115,111 +1115,218 @@ class Welcome extends CI_Controller
         $this->load->view('admin/start', $data);
     }
 
-    public function updatedProduct()
-    {
-        if (!$this->session->userdata('username')) {
-            redirect('myadmin');
-        }
-        if (isset($_POST['update'])) {
-             $id = $this->input->post('id');
-            $data['products'] = $this->WelcomeModel->selectModelInArraybyId('product_details',$id);
+//    public function updatedProduct()
+//    {
+//        if (!$this->session->userdata('username')) {
+//            redirect('myadmin');
+//        }
+//        if (isset($_POST['update'])) {
+//             $id = $this->input->post('id');
+//            $data['products'] = $this->WelcomeModel->selectModelInArraybyId('product_details',$id);
+//
+//            // echo $data['products']['thumbnail1'];
+//            // for thumbnail1
+//            if ($_FILES['thumbnail1']['name'] != '') {
+//                if ($data['products']['thumbnail1'] != '') {
+//                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail1']);
+//                }
+//                $uploaded_doc = $_FILES['thumbnail1']['name'];
+//                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+//                move_uploaded_file($_FILES['thumbnail1']['tmp_name'], $paths);
+//                 $p1 = $uploaded_doc;
+//            } else {
+//                   $p1 = $data['products']['thumbnail1'];
+//            }
+//
+//            // for thumbnail2
+//            if ($_FILES['thumbnail2']['name'] != '') {
+//                if ($data['products']['thumbnail2'] != '') {
+//                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail2']);
+//                }
+//                $uploaded_doc = $_FILES['thumbnail2']['name'];
+//                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+//                move_uploaded_file($_FILES['thumbnail2']['tmp_name'], $paths);
+//                 $p2 = $uploaded_doc;
+//            } else {
+//                  $p2 = $data['products']['thumbnail2'];
+//            }
+//
+//            // for thumbnail
+//            if ($_FILES['thumbnail3']['name'] != '') {
+//                if ($data['products']['thumbnail3'] != '') {
+//                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail3']);
+//                }
+//                $uploaded_doc = $_FILES['thumbnail3']['name'];
+//                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+//                move_uploaded_file($_FILES['thumbnail3']['tmp_name'], $paths);
+//                 $p3 = $uploaded_doc;
+//            } else {
+//                   $p3 = $data['products']['thumbnail3'];
+//            }
+//
+//            // for thumbnail4
+//            if ($_FILES['thumbnail4']['name'] != '') {
+//                if ($data['products']['thumbnail4'] != '') {
+//                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail4']);
+//                }
+//                $uploaded_doc = $_FILES['thumbnail4']['name'];
+//                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+//                move_uploaded_file($_FILES['thumbnail4']['tmp_name'], $paths);
+//                 $p4 = $uploaded_doc;
+//            } else {
+//                $p4 = $data['products']['thumbnail4'];
+//            }
+//
+//            $data = array(
+//                'categoryId' => $this->input->post('categoryId'),
+//                'subcategoryId' => $this->input->post('subcategory'),
+//                'productCode' => $this->input->post('productCode'),
+//                'productName' => $this->input->post('productName'),
+//                'price' => $this->input->post('price'),
+//                'mrp' => $this->input->post('mrp'),
+//				'delivery_charge' =>$this->post('delivery_charge'),
+////                'quantity' => $this->input->post('quantity'),
+////                'discount' => $this->input->post('discount'),
+////                'color' => $this->input->post('color'),
+////                'size' => $this->input->post('size'),
+//                'weight' => $this->input->post('weight'),
+//                'smallDiscription' => $this->input->post('smallDescription'),
+//                'features' => $this->input->post('features'),
+//                'productDescription' => $this->input->post('description'),
+//                'hotdeal' => $this->input->post('hotdeal'),
+//                'premium' => $this->input->post('premium'),
+//                'inStock' => $this->input->post('inStock'),
+//                'latestCollection' => $this->input->post('latestCollection'),
+//                'thumbnail1' => $p1,
+//                'thumbnail2' => $p2,
+//                'thumbnail3' => $p3,
+//                'thumbnail4' => $p4,
+//                'added_by' => '',
+//                'updated_at' => date('Y-m-d H:i:s'),
+//                'updated_by' => '',
+//                'status' => '1',
+//                'updated_at' => date('Y-m-d H:i:s'),
+//            );
+//            // print_r($data);
+//            // die;
+//            $res = $this->WelcomeModel->productUpdate($data, $id);
+//            if ($res == true) {
+//                $this->session->set_flashdata('success_msg', ' Record Updated Successfully. ');
+//                redirect('product-list');
+//            } else {
+//                $this->session->set_flashdata('error_msg', ' Sorry Some Error While updating!!!!');
+//                redirect('product-list');
+//            }
+//        }
+//         redirect('product-list');
+//    }
 
-            // echo $data['products']['thumbnail1'];
-            // for thumbnail1
-            if ($_FILES['thumbnail1']['name'] != '') {
-                if ($data['products']['thumbnail1'] != '') {
-                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail1']);
-                }
-                $uploaded_doc = $_FILES['thumbnail1']['name'];
-                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
-                move_uploaded_file($_FILES['thumbnail1']['tmp_name'], $paths);
-                 $p1 = $uploaded_doc;
-            } else {
-                  $p1 = $data['products']['thumbnail1'];
-            }
+	public function updatedProduct()
+	{
+		if (!$this->session->userdata('username')) {
+			redirect('myadmin');
+		}
+		if (isset($_POST['update'])) {
+			$id = $this->input->post('id');
+			$data['products'] = $this->WelcomeModel->selectModelInArraybyId('product_details',$id);
 
-            // for thumbnail2
-            if ($_FILES['thumbnail2']['name'] != '') {
-                if ($data['products']['thumbnail2'] != '') {
-                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail2']);
-                }
-                $uploaded_doc = $_FILES['thumbnail2']['name'];
-                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
-                move_uploaded_file($_FILES['thumbnail2']['tmp_name'], $paths);
-                 $p2 = $uploaded_doc;
-            } else {
-                echo  $p2 = $data['products']['thumbnail2'];
-            }
+			// echo $data['products']['thumbnail1'];
+			// for thumbnail1
+			if ($_FILES['thumbnail1']['name'] != '') {
+				if ($data['products']['thumbnail1'] != '') {
+					unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail1']);
+				}
+				$uploaded_doc = $_FILES['thumbnail1']['name'];
+				$paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+				move_uploaded_file($_FILES['thumbnail1']['tmp_name'], $paths);
+				$p1 = $uploaded_doc;
+			} else {
+				$p1 = $data['products']['thumbnail1'];
+			}
 
-            // for thumbnail
-            if ($_FILES['thumbnail3']['name'] != '') {
-                if ($data['products']['thumbnail3'] != '') {
-                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail3']);
-                }
-                $uploaded_doc = $_FILES['thumbnail3']['name'];
-                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
-                move_uploaded_file($_FILES['thumbnail3']['tmp_name'], $paths);
-                 $p3 = $uploaded_doc;
-            } else {
-                  $p3 = $data['products']['thumbnail3'];
-            }
+			// for thumbnail2
+			if ($_FILES['thumbnail2']['name'] != '') {
+				if ($data['products']['thumbnail2'] != '') {
+					unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail2']);
+				}
+				$uploaded_doc = $_FILES['thumbnail2']['name'];
+				$paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+				move_uploaded_file($_FILES['thumbnail2']['tmp_name'], $paths);
+				$p2 = $uploaded_doc;
+			} else {
+				echo  $p2 = $data['products']['thumbnail2'];
+			}
 
-            // for thumbnail4
-            if ($_FILES['thumbnail4']['name'] != '') {
-                if ($data['products']['thumbnail4'] != '') {
-                    unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail4']);
-                }
-                $uploaded_doc = $_FILES['thumbnail4']['name'];
-                 $paths = FCPATH . "./uploads/product/" . $uploaded_doc;
-                move_uploaded_file($_FILES['thumbnail4']['tmp_name'], $paths);
-                 $p4 = $uploaded_doc;
-            } else {
-                $p4 = $data['products']['thumbnail4'];
-            }
+			// for thumbnail
+			if ($_FILES['thumbnail3']['name'] != '') {
+				if ($data['products']['thumbnail3'] != '') {
+					unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail3']);
+				}
+				$uploaded_doc = $_FILES['thumbnail3']['name'];
+				$paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+				move_uploaded_file($_FILES['thumbnail3']['tmp_name'], $paths);
+				$p3 = $uploaded_doc;
+			} else {
+				$p3 = $data['products']['thumbnail3'];
+			}
 
-            $data = array(
-                'categoryId' => $this->input->post('categoryId'),
-                'subcategoryId' => $this->input->post('subcategory'),
-                'productCode' => $this->input->post('productCode'),
-                'productName' => $this->input->post('productName'),
-                /*'price' => $this->input->post('price'),
-                'mrp' => $this->input->post('mrp'),
-                'quantity' => $this->input->post('quantity'),
-                'discount' => $this->input->post('discount'),
-                'color' => $this->input->post('color'),
-                'size' => $this->input->post('size'),*/
-                'weight' => $this->input->post('weight'),
-                'smallDiscription' => $this->input->post('smallDescription'),
-                'features' => $this->input->post('features'),
-                'productDescription' => $this->input->post('description'),
-                'hotdeal' => $this->input->post('hotdeal'),
-                'premium' => $this->input->post('premium'),
-                'inStock' => $this->input->post('inStock'),
-                'latestCollection' => $this->input->post('latestCollection'),
-                'thumbnail1' => $p1,
-                'thumbnail2' => $p2,
-                'thumbnail3' => $p3,
-                'thumbnail4' => $p4,
-                'added_by' => '',
-                'updated_at' => date('Y-m-d H:i:s'),
-                'updated_by' => '',
-                'status' => '1',
-                'updated_at' => date('Y-m-d H:i:s'),
-            );
-            // print_r($data);
-            // die;
-            $res = $this->WelcomeModel->productUpdate($data, $id);
-            if ($res == true) {
-                $this->session->set_flashdata('success_msg', ' Record Updated Successfully. ');
-                redirect('product-list');
-            } else {
-                $this->session->set_flashdata('error_msg', ' Sorry Some Error While updating!!!!');
-                redirect('product-list');
-            }
-        }
-        // redirect('product-list');
-    }
+			// for thumbnail4
+			if ($_FILES['thumbnail4']['name'] != '') {
+				if ($data['products']['thumbnail4'] != '') {
+					unlink(FCPATH . 'uploads/product/' . $data['products']['thumbnail4']);
+				}
+				$uploaded_doc = $_FILES['thumbnail4']['name'];
+				$paths = FCPATH . "./uploads/product/" . $uploaded_doc;
+				move_uploaded_file($_FILES['thumbnail4']['tmp_name'], $paths);
+				$p4 = $uploaded_doc;
+			} else {
+				$p4 = $data['products']['thumbnail4'];
+			}
 
+			$data = array(
+				'categoryId' => $this->input->post('categoryId'),
+				'subcategoryId' => $this->input->post('subcategory'),
+				'productCode' => $this->input->post('productCode'),
+				'productName' => $this->input->post('productName'),
+				/* 'price' => $this->input->post('price'),
+				 'mrp' => $this->input->post('mrp'),*/
+				/*    'quantity' => $this->input->post('quantity'),
+					'discount' => $this->input->post('discount'),
+					'color' => $this->input->post('color'),
+					'size' => $this->input->post('size'),*/
+				'weight' => $this->input->post('weight'),
+				'delivery_charge' => $this->input->post('delivery_charge'),
+				/* 'brand' => $this->input->post('brand'),*/
+				'smallDiscription' => $this->input->post('smallDescription'),
+				'features' => $this->input->post('features'),
+				'productDescription' => $this->input->post('description'),
+				'hotdeal' => $this->input->post('hotdeal'),
+				'premium' => $this->input->post('premium'),
+				'inStock' => $this->input->post('inStock'),
+				'latestCollection' => $this->input->post('latestCollection'),
+				'thumbnail1' => $p1,
+				'thumbnail2' => $p2,
+				'thumbnail3' => $p3,
+				'thumbnail4' => $p4,
+				'added_by' => '',
+				'updated_at' => date('Y-m-d H:i:s'),
+				'updated_by' => '',
+				'status' => '1',
+				'updated_at' => date('Y-m-d H:i:s'),
+			);
+			// print_r($data);
+			// die;
+			$res = $this->WelcomeModel->productUpdate($data, $id);
+			if ($res == true) {
+				$this->session->set_flashdata('success_msg', ' Record Updated Successfully. ');
+				redirect('product-list');
+			} else {
+				$this->session->set_flashdata('error_msg', ' Sorry Some Error While updating!!!!');
+				redirect('product-list');
+			}
+		}
+		// redirect('product-list');
+	}
     public function compressImage($source_image, $compress_image)
     {
         $image_info = getimagesize($source_image);
@@ -1320,7 +1427,7 @@ class Welcome extends CI_Controller
         $res = $this->WelcomeModel->insertModel($arrayName, 'product_details');
         if ($res == true) {
 
-          
+
 
             $this->session->set_flashdata('success_msg', ' Record Submitted Successfully.Click here to add stock');
         } else {
@@ -1510,6 +1617,7 @@ class Welcome extends CI_Controller
             $mrp=$this->input->post('mrp');
             $price=$this->input->post('price');
             $quantity=$this->input->post('quantity');
+            $delivery_charge=$this->input->post('delivery_charge');
             $data1 = array(
                 'productCode' => $this->input->post('productCode'),
                 'productID' => $this->input->post('productId'),
@@ -1526,7 +1634,7 @@ class Welcome extends CI_Controller
             $res1 = $this->WelcomeModel->insertModel($data1, 'stockreport');
 
             if ($res == true && $res1 == true) {
-                $this->db->query("update product_details set quantity='$quantity', price='$price',strikePrice='$price', mrp='$mrp' WHERE id='$proID'  ");
+                $this->db->query("update product_details set quantity='$quantity', price='$price',strikePrice='$price', mrp='$mrp',delivery_charge='$delivery_charge' WHERE id='$proID' ");
                         
                 $this->session->set_flashdata('success_msg', ' Success!!! Data Inserted. ');
                 redirect('add-stock');

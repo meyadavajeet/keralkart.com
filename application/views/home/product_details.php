@@ -291,13 +291,13 @@ $link .= $_SERVER['REQUEST_URI'];
  $finalFBURL='https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fkeralkart.com%2F&appId=427813947821443';
 
  $linkedinURL='https://www.linkedin.com/shareArticle?mini=true&url='.$link.'&title=LinkedIn%20Developer%20Network&summary=My%20favorite%20developer%20program&source=LinkedIn';
- 
+$finalTwitterURL ='https://twitter.com/intent/tweet?url='.$link.'&text=keralkart%20blog';
 ?>
 
     <div class="post-shares sticky-shares">
         
         <a href="<?=$finalFBURL?>" id="shareBtn" title="Share to facebook" class="share-facebook"><img src="<?=base_url()?>assets/images/fb.png" width="22" height="22"></a>
-        <a href="#" title="Share to twitter" class="share-twitter"><img src="<?=base_url()?>assets/images/twitter.png" width="22" height="22"></a>
+        <a href="<?=$finalTwitterURL?>" title="Share to twitter" class="share-twitter"><img src="<?=base_url()?>assets/images/twitter.png" width="22" height="22"></a>
         
         <a title="Share via Whatsapp" href="https://wa.me/?text=<?=urlencode($link)?>" class="share-pinterest"><img src="<?=base_url()?>assets/images/whatsapp.png" width="22" height="22"></a>
         <a href="<?=$linkedinURL?>" target="_blank" title="share to linkedin" class="share-linkedin"><img src="<?=base_url()?>assets/images/icon-linkedin.webp" width="22" height="22"></a>

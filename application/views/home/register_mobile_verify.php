@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center text-uppercase">Otp Verifaction </div>
-
+<!--					--><?//=$this->session->userdata('register_otp')?>
                     <form method="post" action="<?=base_url()?>Register-otp-verify" name="passwordForm" id="passwordForm">
                    
                         <div class="panel-body">
